@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 3rem;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 0.5rem;
+}
+
+.contacts-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 0.15rem solid antiquewhite;
+  border-radius: 10px;
+
+  width: 15rem;
+
+  overflow: hidden;
+}
+
+.contact-card img {
+  object-fit: cover;
+  display: block;
+}
+
+.profile {
+  width: 12rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.info-group {
+  display: flex;
+  align-items: center;
+
+  margin-right: auto;
+  margin-left: 1rem;
+  margin-bottom: 0.3rem;
+
+  gap: 0.5rem
+}

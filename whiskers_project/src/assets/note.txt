@@ -1,0 +1,15 @@
+1. props helps us accomplish the reusabiliy of a component.
+
+2. How to pass props:
+    <Mycomponent title="thisisit"/>
+
+3. How to recieve props in a component?
+    function Navbar (props) {
+        return (
+            <header>
+                ...
+            </header>
+        )
+    }
+
+4. props is an Object data type!
