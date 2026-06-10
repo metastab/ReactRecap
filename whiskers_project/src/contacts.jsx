@@ -1,5 +1,5 @@
 export default function Contacts(props) {
-    console.log(props)
+    //console.log(props)
 
     let src = props.img;
     let name = props.name;

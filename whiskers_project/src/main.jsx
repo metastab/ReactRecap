@@ -4,10 +4,24 @@ import './index.css'
 
 import Contacts from './contacts'
 
+//Data mapping from data.js
+import data from "./data.js"
+
+const entryElements = data.map((entry)=>{
+  return (
+    <Contacts key = {entry.id}
+              img = {entry.img}
+              name = {entry.name}
+              phone = {entry.phone}
+              email = {entry.email}
+    />
+  )
+})
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-    <div className='contacts-container'>
+    {/* <div className='contacts-container'>
       <Contacts img="./images/whiskerson.jpg"
                 name="Mr. Whiskerson"
                 phone="(212) 555-1234"
@@ -43,7 +57,14 @@ createRoot(document.getElementById('root')).render(
                 phone="(202) 555-1357"
                 email="prof.chonk@catademy.meow"
       />
+    </div> */}
+
+    {/* Here I am gonna use a function that uses the data.js to fill all the fields and create as many components as much the data demands. SCALABLE! */}
+
+    <div className='contacts-container'>
+      {entryElements}
     </div>
+    
     
   </StrictMode>,
 )
