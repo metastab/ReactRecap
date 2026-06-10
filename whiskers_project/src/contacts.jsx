@@ -14,12 +14,12 @@ export default function Contacts(props) {
             <h2>{name}</h2>
 
             <div className="info-group">
-                <img src="images/phone-icon.png" alt="phone" width="15" height="15" />
+                <img src="/images/phone-icon.png" alt="phone" width="13" height="13" />
                 <p>{phone}</p>
             </div>
 
             <div className="info-group">
-                <img src="images/mail-icon.png" alt="mail" width="15" height="15"/>
+                <img src="/images/mail-icon.png" alt="mail" width="15" height="15"/>
                 <p>{email}</p>
             </div>
 
