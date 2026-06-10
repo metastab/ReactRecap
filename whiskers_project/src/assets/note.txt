@@ -13,3 +13,6 @@
     }
 
 4. props is an Object data type!
+
+5. Instead of writing every component's props each time while passing, we can fetch the data from somewhere using a function using map method and create an array of that data.
+6. The array will containing all the data and we use the array to pass the props. 

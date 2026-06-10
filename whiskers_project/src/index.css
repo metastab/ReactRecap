@@ -49,6 +49,7 @@ h2 {
 .contact-card h2 {
   margin-right: auto;
   margin-left: 1.3rem;
+  font-family: cursive;
 }
 
 .info-group {
@@ -62,4 +63,5 @@ h2 {
   gap: 0.5rem;
 
   font-size: small;
+  font-family: cursive;
 }

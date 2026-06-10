@@ -18,6 +18,7 @@ const entryElements = data.map((entry)=>{
   )
 })
 
+//console.log (entryElements)
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
@@ -59,8 +60,7 @@ createRoot(document.getElementById('root')).render(
       />
     </div> */}
 
-    {/* Here I am gonna use a function that uses the data.js to fill all the fields and create as many components as much the data demands. SCALABLE! */}
-
+    {/* This entryElements will create as many components as much the data demands. SCALABLE! */}
     <div className='contacts-container'>
       {entryElements}
     </div>
