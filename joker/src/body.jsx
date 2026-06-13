@@ -7,7 +7,7 @@ export default function Body() {
 
     const keyword_list = keywords.map((keyword)=>{
         return (
-            <li key={keyword}>
+            <li id="typed-keywords" key={keyword}>
                 {keyword}
             </li>
         )
@@ -38,12 +38,23 @@ export default function Body() {
                     aria-label="keywords"
                     name="keywords" 
                 />
-                <button>Type keywords</button>
+                <button>+ Type keywords</button>
             </form>
 
-            <ul id="keyword-list" >
-                {keyword_list}  
-            </ul>
+        {/* will be using conditional rendering here */}
+        {!keywords.length == 0 &&
+        <section>
+            <h2 id="form-header">Current keywords</h2>
+            <ul id="keyword-list" > {keyword_list} </ul>
+            <div className="get-keyword-container">
+                <div>
+                    <h3>Ready for a joke?</h3>
+                    <p>Generate a joke from your list of keywords.</p>
+                </div>
+                <button>🎭 Get a Joke.</button>
+            </div>
+        </section>}
+
         </main>
     )
 }
