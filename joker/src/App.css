@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,15 +10,15 @@ header{
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-#joker{
+#joker {
     height: 4rem;
     width: 3rem;
     border-radius: 5px;
 }
 
-#joker-text{
+#joker-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
 /* Main container */
@@ -89,6 +89,10 @@ section {
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+#min-items-warning {
+    color: rgb(243, 29, 29);
 }
 
 /* Joke container */
