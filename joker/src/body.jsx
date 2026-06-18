@@ -1,9 +1,12 @@
 
 import React from "react"
+import { getJokeFromMistral } from "./ai"
+
+import JokeSection from "./JokeSection";
 
 export default function Body() {
 
-    const [keywords, setKeywords] = React.useState(["banana", "sugar"]);
+    const [keywords, setKeywords] = React.useState([]);
 
     const keyword_list = keywords.map((keyword) => {
         return (
@@ -29,6 +32,13 @@ export default function Body() {
         })
     }
 
+    const [joke, setJoke] = React.useState("")
+
+    async function getJoke() {
+        const jokeMarkdown = await getJokeFromMistral(keywords)
+        setJoke(jokeMarkdown)
+    }
+
     return (
         <main>
             <form action={handleSubmit} className="keyword-form">
@@ -44,10 +54,14 @@ export default function Body() {
             {/* will be using conditional rendering here */}
 
             {keywords.length < 3 &&
-                <h5 id="min-items-warning">please provide atleast 4 ingredients!</h5>}
+                <section>
+                    <h5 id="min-items-warning">please provide atleast 3 keywords!</h5>
+                </section>
+            }
 
             <section>
-                <h2 id="form-header">Current keywords</h2>
+                {keywords.length > 0 && <h2 id="form-header">Current keywords</h2>}
+
                 <ul id="keyword-list" > {keyword_list} </ul>
 
                 {keywords.length >= 3 &&
@@ -56,10 +70,13 @@ export default function Body() {
                             <h3>Ready for a joke?</h3>
                             <p>Generate a joke from your list of keywords.</p>
                         </div>
-                        <button>🎭 Get a Joke.</button>
-                    </div>}
+                        <button onClick={getJoke}>🎭 Get a Joke.</button>
+                    </div>
+                }
 
             </section>
+
+            {joke && <JokeSection joke={joke} />}
 
         </main>
     )

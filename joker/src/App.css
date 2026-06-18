@@ -131,6 +131,17 @@ section {
     background-color: #059669;
 }
 
+.joke-container {
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+#joke-header {
+    margin-bottom: 1.3rem;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     .keyword-form {
